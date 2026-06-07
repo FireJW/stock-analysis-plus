@@ -1,0 +1,19 @@
+{
+  "prompt": "[$longbridge] Build a read-only NVDA.US trading-plan package with catalyst, filings, ownership, execution preflight, derivative event risk, and governance evidence. Do not place orders.",
+  "task_type": "trading_plan",
+  "tickers": [
+    "NVDA.US"
+  ],
+  "analysis_date": "2026-05-06",
+  "analysis_layers": [
+    "catalyst",
+    "valuation",
+    "financial_event",
+    "ownership_risk",
+    "execution_preflight",
+    "derivative_event_risk",
+    "governance_structure"
+  ],
+  "session_type": "premarket",
+  "content_count": 3
+}

@@ -1,0 +1,15 @@
+{
+  "analysis_date": "2026-04-29",
+  "analysis_layers": [
+    "catalyst",
+    "valuation",
+    "financial_event"
+  ],
+  "content_count": 3,
+  "tickers": [
+    "600111.SH",
+    "000969.SZ",
+    "000831.SZ",
+    "600392.SH"
+  ]
+}

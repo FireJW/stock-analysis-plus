@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stock Analysis Plus</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172026;
+      --muted: #5d6b73;
+      --line: #d8dee2;
+      --paper: #f7f8f8;
+      --accent: #0f766e;
+      --accent-2: #92400e;
+      --panel: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.5;
+    }
+    header {
+      padding: 48px 24px 32px;
+      border-bottom: 1px solid var(--line);
+      background: #ffffff;
+    }
+    main {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 32px 24px 56px;
+    }
+    .hero {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 4vw, 4rem);
+      letter-spacing: 0;
+    }
+    .lead {
+      max-width: 760px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.15rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      background: var(--panel);
+    }
+    .label {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: var(--accent);
+      font-size: .82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+    h2 {
+      margin: 28px 0 12px;
+      font-size: 1.3rem;
+      letter-spacing: 0;
+    }
+    h3 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      letter-spacing: 0;
+    }
+    p { margin: 0; }
+    code {
+      background: #eef2f1;
+      border: 1px solid #d6e0dd;
+      border-radius: 6px;
+      padding: 2px 6px;
+      font-size: .92em;
+    }
+    pre {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      background: #101820;
+      color: #edf7f4;
+    }
+    .note {
+      margin-top: 24px;
+      padding-left: 14px;
+      border-left: 4px solid var(--accent-2);
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <section class="hero">
+      <h1>Stock Analysis Plus</h1>
+      <p class="lead">A public-safe stock research workflow kit for shortlist generation, macro overlays, evidence bundles, and market-data adapters.</p>
+    </section>
+  </header>
+  <main>
+    <section class="grid" aria-label="workflow modules">
+      <article class="card">
+        <span class="label">Shortlist</span>
+        <h3>Month-end candidate review</h3>
+        <p>Build candidate pools, merge trading-plan context, and produce decision-ready summaries.</p>
+      </article>
+      <article class="card">
+        <span class="label">Macro</span>
+        <h3>Health overlay</h3>
+        <p>Attach market-regime and macro-health checks to stock selection workflows.</p>
+      </article>
+      <article class="card">
+        <span class="label">Data</span>
+        <h3>Longbridge adapters</h3>
+        <p>Reusable references and runners for quote, screen, ownership, and trading-plan data flows.</p>
+      </article>
+    </section>
+    <h2>Local Usage</h2>
+    <pre><code>py -3 -m stock_analysis_plus.cli list
+py -3 skills\month-end-shortlist\scripts\month_end_shortlist.py --help
+py -3 skills\macro-health-overlay\scripts\macro_health_overlay.py --help</code></pre>
+    <p class="note">This extraction omits private handoffs, browser profiles, session logs, credentials, generated research outputs, and personal machine paths.</p>
+  </main>
+</body>
+</html>

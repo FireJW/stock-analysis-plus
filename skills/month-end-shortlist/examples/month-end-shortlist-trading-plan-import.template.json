@@ -1,0 +1,42 @@
+{
+  "target_date": "2026-05-11",
+  "top_picks": [
+    {
+      "ticker": "600000.SH",
+      "name": "PF Bank",
+      "score": 68.5,
+      "chain_name": "bank_revaluation",
+      "tier_tags": ["direction_leader"],
+      "price_paths": {
+        "base": [12.2, 12.8],
+        "support": [11.8],
+        "resistance": [13.2]
+      },
+      "trade_card": {
+        "watch_action": "wait for reclaim",
+        "invalidation": "break below 11.8"
+      },
+      "execution_state": "live"
+    }
+  ],
+  "priority_watchlist": [
+    {
+      "ticker": "000001.SZ",
+      "name": "PA Bank",
+      "score": 54.0,
+      "trade_card": {
+        "watch_action": "watch pullback"
+      }
+    }
+  ],
+  "near_miss_candidates": [
+    {
+      "ticker": "002837.SZ",
+      "name": "Invic",
+      "keep_threshold_gap": -2.3,
+      "trade_card": {
+        "invalidation": "below ma20"
+      }
+    }
+  ]
+}

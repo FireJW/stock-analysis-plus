@@ -1,0 +1,33 @@
+{
+  "template_name": "month_end_shortlist",
+  "target_date": "2026-04-17",
+  "filter_profile": "month_end_event_support_transition",
+  "event_discovery_candidates": [
+    {
+      "ticker": "000988.SZ",
+      "name": "华工科技",
+      "event_type": "quarterly_preview",
+      "event_strength": "strong",
+      "chain_name": "optical",
+      "chain_role": "midstream_manufacturing",
+      "benefit_type": "direct",
+      "sources": [
+        {
+          "source_type": "official_filing",
+          "summary": "一季报预告显示利润显著增长"
+        },
+        {
+          "source_type": "x_summary",
+          "account": "Ariston_Macro",
+          "summary": "市场把这次预告理解成板块盈利预期修复信号"
+        }
+      ],
+      "market_validation": {
+        "volume_multiple_5d": 2.0,
+        "breakout": true,
+        "relative_strength": "strong",
+        "chain_resonance": true
+      }
+    }
+  ]
+}

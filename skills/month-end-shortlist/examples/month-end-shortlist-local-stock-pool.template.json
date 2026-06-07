@@ -1,0 +1,42 @@
+{
+  "template_name": "month_end_shortlist",
+  "target_date": "2026-05-11",
+  "analysis_time": "2026-05-11T15:30:00+08:00",
+  "local_daily_bars_source": {
+    "kind": "tdx_vipdoc",
+    "path": "E:\\new_tdx\\vipdoc"
+  },
+  "local_stock_pool": {
+    "schema_version": "local_stock_pool/v1",
+    "name": "local-watch-pool",
+    "stocks": [
+      {
+        "ticker": "600000.SH",
+        "name": "浦发银行",
+        "groups": ["核心观察"],
+        "tags": ["bank", "dividend"],
+        "strategy_tags": ["ma20_reclaim"],
+        "notes": "本地股票池 UI 只读种子；进入 workflow 后仍需实时行情、公告、新闻和基本面验证。"
+      },
+      {
+        "ticker": "000001.SZ",
+        "name": "平安银行",
+        "groups": ["核心观察"],
+        "tags": ["bank"],
+        "strategy_tags": ["volume_reacceleration"]
+      }
+    ],
+    "strategy_rules": [
+      {
+        "name": "MA20 reclaim",
+        "conditions": ["close_above_ma20", "ma20_turning_up"],
+        "usage_boundary": "technical_context_only"
+      },
+      {
+        "name": "Volume reacceleration",
+        "conditions": ["vol_ratio_5d_above_1_5"],
+        "usage_boundary": "technical_context_only"
+      }
+    ]
+  }
+}

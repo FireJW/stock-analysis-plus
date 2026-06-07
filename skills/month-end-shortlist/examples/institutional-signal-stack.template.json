@@ -1,0 +1,107 @@
+{
+  "schema_version": "institutional_signal_stack/v1",
+  "objective": "Make stock information collection, monitoring, analysis, watchlist, and entry-list screening comparable to institutional research workflows while staying local-first and read-only by default.",
+  "required_layers": [
+    "data_provenance",
+    "fresh_discovery",
+    "macro_regime",
+    "sector_leadership",
+    "single_name_quality",
+    "catalyst_news",
+    "risk_execution",
+    "review_loop"
+  ],
+  "optional_layers": [
+    "social_altdata",
+    "ownership_fundamental",
+    "validation_backtest"
+  ],
+  "monitoring_signal_roster": [
+    {
+      "id": "rates_policy",
+      "signals": ["US2Y", "US10Y", "US30Y", "2s10s", "real_yields", "breakevens", "Fed_path"]
+    },
+    {
+      "id": "fx_liquidity",
+      "signals": ["DXY", "USD/CNH", "USD/JPY", "global_liquidity", "financial_conditions"]
+    },
+    {
+      "id": "credit_volatility",
+      "signals": ["VIX", "VVIX", "MOVE", "HY_spreads", "HYG/LQD", "CDX_or_public_proxy"]
+    },
+    {
+      "id": "commodities_geopolitics",
+      "signals": ["WTI", "Brent", "gold", "copper", "shipping", "geopolitical_event_risk"]
+    },
+    {
+      "id": "equity_leadership_breadth",
+      "signals": ["SPY", "QQQ", "IWM", "SMH", "NVDA", "sector_ETFs", "A_share_sector_rank", "HK/CN_ADR"]
+    },
+    {
+      "id": "positioning_flows",
+      "signals": ["ETF_flows", "northbound_southbound", "put_call", "options_skew", "volume_anomaly"]
+    },
+    {
+      "id": "earnings_fundamentals",
+      "signals": ["earnings_revisions", "margins", "capex", "SEC_filings", "guidance", "ownership_changes"]
+    },
+    {
+      "id": "news_social_claims",
+      "signals": ["GDELT", "x_index", "watch_author_divergence", "official_news", "supply_chain_checks"]
+    }
+  ],
+  "open_source_base": [
+    {
+      "name": "OpenBB Open Data Platform",
+      "url": "https://docs.openbb.co/",
+      "role": ["data_integration", "python_cli_research_layer", "analyst_workspace_bridge"]
+    },
+    {
+      "name": "AKShare",
+      "url": "https://github.com/akfamily/akshare",
+      "role": ["china_market_data", "macro_data", "public_web_data_adapter"]
+    },
+    {
+      "name": "SEC EDGAR APIs",
+      "url": "https://www.sec.gov/edgar/sec-api-documentation",
+      "role": ["us_filing_fundamentals", "companyfacts", "submissions"]
+    },
+    {
+      "name": "FRED",
+      "url": "https://www.federalreserve.gov/data/data-download-fred-information.htm",
+      "role": ["macro_rates_inflation_liquidity"]
+    },
+    {
+      "name": "GDELT",
+      "url": "https://gdeltcloud.com/",
+      "role": ["global_news_events", "geopolitics", "supply_chain_alerts"]
+    },
+    {
+      "name": "TA-Lib",
+      "url": "https://ta-lib.org/",
+      "role": ["technical_indicators", "candlestick_patterns"]
+    },
+    {
+      "name": "vectorbt",
+      "url": "https://github.com/polakowo/vectorbt",
+      "role": ["vectorized_backtest", "portfolio_research"]
+    },
+    {
+      "name": "QuantStats",
+      "url": "https://github.com/ranaroussi/quantstats",
+      "role": ["portfolio_metrics", "drawdown_risk", "performance_reporting"]
+    },
+    {
+      "name": "FinGPT / FinNLP",
+      "url": "https://github.com/AI4Finance-Foundation/FinGPT",
+      "role": ["financial_nlp", "sentiment", "news_text_features"]
+    }
+  ],
+  "artifact_contract": {
+    "minimum_ready_status": "institutional_ready",
+    "fallback_status": "research_grade_partial",
+    "reject_status": "thin",
+    "read_only_default": true,
+    "account_write_gate_required": true
+  }
+}
