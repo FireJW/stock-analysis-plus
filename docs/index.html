@@ -67,7 +67,7 @@
       font-size: .82rem;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: .04em;
+      letter-spacing: 0;
     }
     h2 {
       margin: 28px 0 12px;
@@ -94,6 +94,15 @@
       padding: 16px;
       background: #101820;
       color: #edf7f4;
+    }
+    pre code {
+      display: block;
+      background: transparent;
+      border: 0;
+      color: inherit;
+      padding: 0;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
     }
     .note {
       margin-top: 24px;
@@ -130,8 +139,26 @@
     </section>
     <h2>Local Usage</h2>
     <pre><code>py -3 -m stock_analysis_plus.cli list
-py -3 skills\month-end-shortlist\scripts\month_end_shortlist.py --help
 py -3 skills\macro-health-overlay\scripts\macro_health_overlay.py --help</code></pre>
+    <h2>Demo Run</h2>
+    <section class="grid" aria-label="demo run outputs">
+      <article class="card">
+        <span class="label">Input</span>
+        <h3>Public macro request</h3>
+        <p><code>skills/macro-health-overlay/examples/macro-health-overlay-public-mix.request.template.json</code></p>
+      </article>
+      <article class="card">
+        <span class="label">Output</span>
+        <h3>Ignored local artifacts</h3>
+        <p><code>.tmp/demo/macro-health-overlay.*</code></p>
+      </article>
+      <article class="card">
+        <span class="label">Boundary</span>
+        <h3>Advisory only</h3>
+        <p>Live public sources can return partial coverage in restricted networks; outputs stay local and reviewable.</p>
+      </article>
+    </section>
+    <p class="note"><a href="demo-run.md">Read the public-safe demo runbook</a> for the command and normalized output shape.</p>
     <p class="note">This extraction omits private handoffs, browser profiles, session logs, credentials, generated research outputs, and personal machine paths.</p>
   </main>
 </body>

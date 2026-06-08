@@ -52,6 +52,8 @@ py -3 skills\macro-health-overlay\scripts\macro_health_overlay.py --help
 
 Some workflows can use live market-data tools when configured locally. No API keys are committed or required for repository inspection. The CLI marks packaged workflows as `partial` when public-safe extraction omits a legacy compiled runtime artifact.
 
+See [docs/demo-run.md](docs/demo-run.md) for a public-safe macro overlay demo command and normalized output shape.
+
 ## Portfolio Framing
 
 This project is useful as a software and AI workflow portfolio artifact because it shows:
@@ -66,6 +68,7 @@ This project is useful as a software and AI workflow portfolio artifact because 
 
 - [GitHub Pages homepage](https://firejw.github.io/stock-analysis-plus/)
 - [Security and privacy](docs/security-and-privacy.md)
+- [Demo runbook](docs/demo-run.md)
 - [Longbridge skill references](skills/longbridge/SKILL.md)
 - [Macro health overlay skill](skills/macro-health-overlay/SKILL.md)
 - [Month-end shortlist examples](skills/month-end-shortlist/examples/)
