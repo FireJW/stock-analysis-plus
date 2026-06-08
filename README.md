@@ -10,7 +10,7 @@ This repository packages the public-facing shape of a larger local market resear
 ## What It Does
 
 - Lists reusable workflow modules through a small Python CLI.
-- Provides month-end shortlist primitives for candidate pools, evidence bundles, report sections, and review status.
+- Provides public month-end shortlist source fragments, templates, and review primitives; legacy compiled entrypoints are intentionally omitted from this public repository.
 - Adds macro health overlays for market-regime context before candidate review.
 - Includes Longbridge-oriented market-data adapter references and runners for quote, screen, ownership, and planning flows.
 - Keeps examples template-based so the repository can be inspected without live credentials or private operating data.
@@ -47,11 +47,10 @@ tests/
 ```powershell
 py -3 -m pip install -e .
 py -3 -m stock_analysis_plus.cli list
-py -3 skills\month-end-shortlist\scripts\month_end_shortlist.py --help
 py -3 skills\macro-health-overlay\scripts\macro_health_overlay.py --help
 ```
 
-Some workflows can use live market-data tools when configured locally. No API keys are committed or required for repository inspection.
+Some workflows can use live market-data tools when configured locally. No API keys are committed or required for repository inspection. The CLI marks packaged workflows as `partial` when public-safe extraction omits a legacy compiled runtime artifact.
 
 ## Portfolio Framing
 

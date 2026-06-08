@@ -13,10 +13,24 @@ SKILLS = {
 }
 
 
+def skill_status(name: str) -> str:
+    path = ROOT / "skills" / name
+    if not path.exists():
+        return "missing"
+    if name == "month-end-shortlist":
+        compiled_root = ROOT / "skills" / "short-horizon-shortlist" / "scripts" / "__pycache__"
+        required_artifacts = [
+            compiled_root / "month_end_shortlist.cpython-312.pyc",
+            compiled_root / "month_end_shortlist_runtime.cpython-312.pyc",
+        ]
+        if any(not artifact.exists() for artifact in required_artifacts):
+            return "partial"
+    return "available"
+
+
 def list_skills() -> int:
     for name, description in SKILLS.items():
-        path = ROOT / "skills" / name
-        marker = "available" if path.exists() else "missing"
+        marker = skill_status(name)
         print(f"{name:24} {marker:9} {description}")
     return 0
 
